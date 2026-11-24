@@ -1,0 +1,1156 @@
+
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #fff;
+    overflow-x: clip;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* TOP CONTACT BAR */
+
+.top-contact-details {
+    background: #1d76b9;
+    color: #fff;
+    font-size: 14px;
+}
+
+.top-contact-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.top-contact-details a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    transition: opacity 0.2s ease;
+}
+
+.top-contact-details a:hover {
+    opacity: 0.8;
+}
+
+.top-contact-details img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.top-contact-details span {
+    color: #fff;
+}
+
+
+/* NAVIGATION */
+
+.main-nav {
+    background: #fff;
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading {
+    color: #1d76b9;
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.home-pages {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 23px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.home-pages > a:not(.btn-call-now):not(.btn-donate) {
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.home-pages > a:not(.btn-call-now):not(.btn-donate):hover,
+.home-pages > a.active {
+    color: #1d76b9;
+}
+
+.home-pages > a:not(.btn-call-now):not(.btn-donate)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 0;
+    background: #1d76b9;
+    transition: width 0.25s ease;
+}
+
+.home-pages > a:not(.btn-call-now):not(.btn-donate):hover::after,
+.home-pages > a.active::after {
+    width: 100%;
+}
+
+
+/* NAVIGATION BUTTONS */
+
+.btn-call-now,
+.btn-donate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-call-now {
+    background: #1d76b9;
+    color: #fff;
+    border: 1px solid #1d76b9;
+}
+
+.btn-call-now:hover {
+    background: #155b91;
+    border-color: #155b91;
+}
+
+.btn-donate {
+    background: transparent;
+    color: #b91d49;
+    border: 1px solid #b91d49;
+}
+
+.btn-donate:hover {
+    background: #b91d49;
+    color: #fff;
+}
+
+
+/* HAMBURGER */
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background: #1d76b9;
+}
+
+
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.abtus-sec1 {
+    background:
+        linear-gradient(
+            120deg,
+            rgba(15, 79, 126, 0.96),
+            rgba(29, 118, 185, 0.88)
+        );
+    padding: 85px 20px;
+    color: #fff;
+}
+
+.abtus-sec1-quote {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero-label,
+.cta-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.hero-label {
+    color: #d9ecfb;
+}
+
+.abtus-sec1-quote h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.abtus-sec1-quote p:last-child {
+    margin-top: 18px;
+    font-size: clamp(15px, 2vw, 19px);
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FOUNDER SECTION
+========================================= */
+
+.home-sec-3 {
+    padding: 85px 0;
+    background: #fff;
+}
+
+.home-sec-3-aboutus-page {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.home-sec-3-content {
+    max-width: 720px;
+}
+
+.home-sec-3-about {
+    display: inline-block;
+    color: #b91d49;
+    background: #b91d4915;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.home-sec-3-content h2 {
+    font-family: 'Lora', serif;
+    font-size: clamp(28px, 3.5vw, 40px);
+    line-height: 1.3;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.home-sec-3-content h2 span {
+    color: #1d76b9;
+}
+
+.home-sec-3-content p:not(.home-sec-3-about) {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.founder-image-wrapper {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.founder-img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+
+.section-label {
+    color: #b91d49;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.abtus-sec3-life-heading h2,
+.awa-cert-sec4-heading h2 {
+    font-family: 'Lora', serif;
+    color: #222;
+    font-size: clamp(27px, 3.5vw, 36px);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.section-heading > p:last-child {
+    color: #666;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   MISSION / VISION / VALUES
+========================================= */
+
+.abtus-sec2 {
+    padding: 80px 0;
+    background: #f5f7fa;
+}
+
+.abtus-sec2-card-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.abtus-sec2-card {
+    background: #fff;
+    border: 1px solid #edf0f3;
+    border-radius: 16px;
+    padding: 35px 30px;
+    min-height: 320px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.045);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.abtus-sec2-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.about-card-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf4fb;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+
+.about-card-icon img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.abtus-sec2-card h3 {
+    font-size: 21px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.abtus-sec2-card p {
+    font-size: 14px;
+    line-height: 1.85;
+    color: #666;
+}
+
+.ourvalues-sec2 {
+    padding-left: 20px;
+    color: #666;
+}
+
+.ourvalues-sec2 li {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 3px;
+}
+
+.ourvalues-sec2 li::marker {
+    color: #1d76b9;
+}
+
+
+/* =========================================
+   LIFE AT SUBHADRA HOME
+========================================= */
+
+.abtus-sec3 {
+    padding: 85px 0;
+    background: #fff;
+}
+
+.abtus-sec3-life-heading {
+    text-align: center;
+}
+
+.abtus-sec3-life-heading h2 {
+    margin-top: 8px;
+}
+
+.life-intro {
+    max-width: 720px;
+    margin: 18px auto 55px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.abtus-sec3-life-sh-content {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    text-align: left;
+}
+
+.life-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.abtus-sec-img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.life-image-wrapper:hover .abtus-sec-img {
+    transform: scale(1.03);
+}
+
+.abtus-sec3-life-sh-paragraph h3 {
+    font-family: 'Lora', serif;
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.abtus-sec3-life-sh-paragraph p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* GALLERY BUTTON */
+
+.abtus-sec3-viewgallery {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #1d76b9;
+    color: #fff;
+    padding: 13px 25px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.abtus-sec3-viewgallery:hover {
+    background: #155b91;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   AWARDS AND CERTIFICATIONS
+========================================= */
+
+.abtus-sec4 {
+    background: #f5f7fa;
+    padding: 80px 0;
+}
+
+.awa-cert-sec4-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.awa-cert-sec4-heading h2 {
+    margin-bottom: 15px;
+}
+
+.awa-cert-sec4-heading > p:last-child {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.awa-cert-sec4-card-group {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.awa-cert-sec4-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #edf0f3;
+    border-radius: 15px;
+    padding: 30px 20px;
+    min-height: 190px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.045);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.awa-cert-sec4-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 13px 28px rgba(0, 0, 0, 0.09);
+}
+
+.award-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.awa-cert-sec4-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.home-sec-5 {
+    padding: 75px 0;
+    background: linear-gradient(120deg, #155b91, #1d76b9);
+}
+
+.sec5-join-sub {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.cta-label {
+    color: #d9ecfb;
+}
+
+.sec5-join-sub h2 {
+    font-family: 'Lora', serif;
+    font-size: clamp(26px, 3.5vw, 36px);
+    line-height: 1.35;
+    margin-bottom: 18px;
+}
+
+.sec5-join-sub > p:not(.cta-label) {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #edf6fc;
+}
+
+.sec5-btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.sec5-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    background: #fff;
+    color: #1d76b9;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.sec5-btn:hover {
+    background: #eaf4fb;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #f7f8fa;
+    padding: 65px 0 20px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr 1.3fr 1.2fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.footer > div {
+    min-width: 0;
+}
+
+.footer h3 {
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-quote p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.9;
+    max-width: 280px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 13px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.footer-quickline a {
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.footer-quickline a:hover {
+    color: #1d76b9;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-wrap: anywhere;
+}
+
+.footer-contact li img {
+    width: 19px;
+    height: 19px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-location {
+    width: 100%;
+}
+
+.footer-location iframe {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border: none;
+    border-radius: 12px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 45px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+
+/* SMALL LAPTOPS */
+
+@media (max-width: 1150px) {
+
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .home-pages {
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 40px;
+    }
+
+}
+
+
+/* TABLETS AND MOBILE NAVIGATION */
+
+@media (max-width: 860px) {
+
+    .navbar {
+        min-height: 72px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .home-pages {
+        position: absolute;
+        top: 100%;
+        left: -24px;
+        right: -24px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 12px 24px 22px;
+        background: #fff;
+        border-top: 1px solid #eee;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.09);
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+
+    .home-pages.open {
+        display: flex;
+    }
+
+    .home-pages > a:not(.btn-call-now):not(.btn-donate) {
+        display: block;
+        width: 100%;
+        padding: 13px 5px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .home-pages > a:not(.btn-call-now):not(.btn-donate)::after {
+        display: none;
+    }
+
+    .home-pages .btn-call-now,
+    .home-pages .btn-donate {
+        width: 100%;
+        margin-top: 12px;
+        padding: 12px;
+    }
+
+    .home-sec-3-aboutus-page {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 35px;
+    }
+
+    .founder-img {
+        height: 390px;
+    }
+
+    .abtus-sec2-card-group {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .abtus-sec2-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .abtus-sec3-life-sh-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .abtus-sec-img {
+        height: 380px;
+    }
+
+    .awa-cert-sec4-card-group {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* MOBILE PHONES */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* CONTACT BAR */
+
+    .top-contact-details {
+        font-size: 12px;
+    }
+
+    .top-contact-inner {
+        justify-content: center;
+        gap: 6px 15px;
+    }
+
+    .top-contact-details a {
+        gap: 6px;
+    }
+
+    /* NAVIGATION */
+
+    .heading {
+        font-size: 23px;
+    }
+
+    .navbar {
+        min-height: 66px;
+    }
+
+    .home-pages {
+        left: -18px;
+        right: -18px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* HERO */
+
+    .abtus-sec1 {
+        padding: 65px 15px;
+    }
+
+    .abtus-sec1-quote h1 {
+        font-size: 34px;
+    }
+
+    .abtus-sec1-quote p:last-child {
+        font-size: 14px;
+    }
+
+    /* FOUNDER */
+
+    .home-sec-3 {
+        padding: 55px 0;
+    }
+
+    .home-sec-3-aboutus-page {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .home-sec-3-content {
+        text-align: left;
+    }
+
+    .home-sec-3-content h2 {
+        font-size: 29px;
+    }
+
+    .home-sec-3-content p:not(.home-sec-3-about) {
+        font-size: 14px;
+    }
+
+    .founder-image-wrapper {
+        max-width: 330px;
+    }
+
+    .founder-img {
+        height: 380px;
+    }
+
+    /* MISSION / VISION / VALUES */
+
+    .abtus-sec2 {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-heading h2,
+    .abtus-sec3-life-heading h2,
+    .awa-cert-sec4-heading h2 {
+        font-size: 27px;
+    }
+
+    .abtus-sec2-card-group {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .abtus-sec2-card {
+        grid-column: auto !important;
+        min-height: auto;
+        padding: 28px 24px;
+    }
+
+    /* LIFE AT HOME */
+
+    .abtus-sec3 {
+        padding: 60px 0;
+    }
+
+    .life-intro {
+        margin: 15px auto 35px;
+        font-size: 14px;
+    }
+
+    .abtus-sec3-life-sh-content {
+        gap: 25px;
+    }
+
+    .abtus-sec-img {
+        height: 260px;
+    }
+
+    .abtus-sec3-life-sh-paragraph h3 {
+        font-size: 22px;
+    }
+
+    .abtus-sec3-life-sh-paragraph p {
+        font-size: 14px;
+    }
+
+    /* AWARDS */
+
+    .abtus-sec4 {
+        padding: 60px 0;
+    }
+
+    .awa-cert-sec4-heading {
+        margin-bottom: 30px;
+    }
+
+    .awa-cert-sec4-card-group {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .awa-cert-sec4-card {
+        padding: 22px 12px;
+        min-height: 160px;
+    }
+
+    .awa-cert-sec4-card h3 {
+        font-size: 13px;
+    }
+
+    /* CTA */
+
+    .home-sec-5 {
+        padding: 55px 0;
+    }
+
+    .sec5-join-sub h2 {
+        font-size: 26px;
+    }
+
+    .sec5-join-sub > p:not(.cta-label) {
+        font-size: 14px;
+    }
+
+    .sec5-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 15px;
+        text-align: center;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 45px 0 18px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-quote p {
+        margin: 0 auto;
+    }
+
+    .footer-contact li {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .footer-location {
+        max-width: 100%;
+    }
+
+    .footer-location iframe {
+        height: 230px;
+    }
+
+    .footer-bottom {
+        margin-top: 35px;
+    }
+
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .top-contact-inner {
+        gap: 6px 10px;
+    }
+
+    .top-contact-details {
+        font-size: 11px;
+    }
+
+    .heading {
+        font-size: 21px;
+    }
+
+    .abtus-sec1-quote h1 {
+        font-size: 29px;
+    }
+
+    .home-sec-3-content h2 {
+        font-size: 26px;
+    }
+
+    .abtus-sec2-card {
+        padding: 24px 20px;
+    }
+
+    .awa-cert-sec4-card-group {
+        grid-template-columns: 1fr;
+    }
+
+    .awa-cert-sec4-card {
+        min-height: 145px;
+    }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+}

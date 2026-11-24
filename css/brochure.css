@@ -1,0 +1,653 @@
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+    color: #263238;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+}
+
+/* Top contact bar */
+
+.top-contact-details {
+    background-color: #1d76b9;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 8px 0;
+}
+
+.top-contact-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px 18px;
+}
+
+.top-contact-details a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    color: #fff;
+}
+
+.top-contact-details img {
+    object-fit: contain;
+}
+
+.top-contact-details span {
+    color: #fff;
+}
+
+.top-contact-details a:hover {
+    opacity: 0.8;
+}
+
+/* Navigation */
+
+nav {
+    padding: 16px 0;
+    background: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.heading {
+    font-size: clamp(22px, 3vw, 30px);
+    line-height: 1.2;
+    font-weight: 900;
+    color: #1d76b9;
+    white-space: nowrap;
+}
+
+.home-pages {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 22px;
+    font-weight: 500;
+}
+
+.home-pages > a {
+    color: #333;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.home-pages > a:hover,
+.home-pages > a.active {
+    color: #1d76b9;
+}
+
+/* Navigation buttons */
+
+.home-pages .btn-call-now,
+.home-pages .btn-donate {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 85px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.home-pages .btn-call-now {
+    background: #1d76b9;
+    color: #fff;
+    border: 1px solid #1d76b9;
+}
+
+.home-pages .btn-call-now:hover {
+    background: #174b75;
+    color: #fff;
+}
+
+.home-pages .btn-donate {
+    background: #fff;
+    color: #b91d49;
+    border: 1px solid #b91d49;
+}
+
+.home-pages .btn-donate:hover {
+    background: #b91d49;
+    color: #fff;
+}
+
+/* Hamburger menu */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    background: #1d76b9;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+/* =========================================
+   BROCHURE SECTION
+========================================= */
+
+.brochure-section {
+    min-height: 75vh;
+    padding: 75px 0;
+    background: #f7f9fc;
+}
+
+/* Heading */
+
+.brochure-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.brochure-heading h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    color: #174b75;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.brochure-heading p {
+    color: #687782;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   BROCHURE CARD
+========================================= */
+
+.brochure-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* PDF icon */
+
+.pdf-icon {
+    width: 110px;
+    height: 125px;
+    flex-shrink: 0;
+    background: #eaf4f8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-page {
+    width: 58px;
+    height: 76px;
+    background: #fff;
+    border: 2px solid #b91d49;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pdf-page span {
+    background: #b91d49;
+    color: #fff;
+    padding: 6px 9px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Brochure content */
+
+.brochure-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.brochure-content h2 {
+    color: #174b75;
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.brochure-content p {
+    color: #687782;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* Brochure buttons */
+
+.brochure-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-view,
+.btn-download {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-view {
+    background: #1d76b9;
+    color: #fff;
+    border: 1px solid #1d76b9;
+}
+
+.btn-view:hover {
+    background: #174b75;
+    border-color: #174b75;
+}
+
+.btn-download {
+    background: #fff;
+    color: #b91d49;
+    border: 1px solid #b91d49;
+}
+
+.btn-download:hover {
+    background: #b91d49;
+    color: #fff;
+}
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+    text-align: center;
+    margin: 55px auto 0;
+    max-width: 650px;
+}
+
+.contact-section h2 {
+    color: #174b75;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.contact-section p {
+    color: #687782;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #1d76b9;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+    background: #174b75;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #f1f5f9;
+    padding: 45px 0;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+.footer-quickline li {
+    display: block;
+}
+
+.footer-quickline a {
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.footer-quickline a:hover {
+    color: #1d76b9;
+}
+
+.footer-contact img {
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.footer-contact a {
+    color: #555;
+}
+
+.footer-contact a:hover {
+    color: #1d76b9;
+}
+
+.footer-location iframe {
+    width: 100%;
+    height: 220px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .home-pages {
+        gap: 13px;
+        font-size: 13px;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 860px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .home-pages {
+        display: none;
+        position: absolute;
+        top: calc(100% + 16px);
+        left: -24px;
+        right: -24px;
+        max-height: calc(100vh - 130px);
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 24px 20px;
+        background: #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+    }
+
+    .home-pages.open {
+        display: flex;
+    }
+
+    .home-pages > a {
+        display: block;
+        width: 100%;
+        padding: 12px 5px;
+        font-size: 15px;
+    }
+
+    .home-pages .btn-call-now,
+    .home-pages .btn-donate {
+        text-align: center;
+        margin-top: 8px;
+        padding: 12px;
+    }
+
+    .brochure-section {
+        padding: 60px 0;
+    }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .top-contact-details {
+        font-size: 12px;
+    }
+
+    .top-contact-inner {
+        gap: 4px 12px;
+    }
+
+    .top-contact-details a {
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    .heading {
+        font-size: 21px;
+    }
+
+    .home-pages {
+        left: -18px;
+        right: -18px;
+    }
+
+    .brochure-section {
+        padding: 45px 0;
+    }
+
+    .brochure-heading {
+        margin-bottom: 30px;
+    }
+
+    .brochure-heading h1 {
+        font-size: 27px;
+    }
+
+    .brochure-heading p {
+        font-size: 13px;
+    }
+
+    .brochure-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 20px;
+        gap: 22px;
+    }
+
+    .pdf-icon {
+        width: 95px;
+        height: 110px;
+    }
+
+    .brochure-content h2 {
+        font-size: 20px;
+    }
+
+    .brochure-content p {
+        font-size: 13px;
+    }
+
+    .brochure-buttons {
+        flex-direction: column;
+    }
+
+    .brochure-buttons a {
+        width: 100%;
+    }
+
+    .contact-section {
+        margin-top: 40px;
+    }
+
+    .contact-section h2 {
+        font-size: 20px;
+    }
+
+    .contact-section p {
+        font-size: 13px;
+    }
+
+    footer {
+        padding: 35px 0;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer h3 {
+        font-size: 17px;
+    }
+
+    .footer-location iframe {
+        height: 200px;
+    }
+
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(29, 118, 185, 0.45);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+}

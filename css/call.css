@@ -1,0 +1,823 @@
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+}
+
+/* Top contact bar */
+
+.top-contact-details {
+    background-color: #1d76b9;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.top-contact-details .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+}
+
+.top-contact-details a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    color: #fff;
+}
+
+.top-contact-details img {
+    object-fit: contain;
+}
+
+.top-contact-details span {
+    color: #fff;
+}
+
+.top-contact-details a:hover {
+    opacity: 0.8;
+}
+
+/* Navigation */
+
+nav {
+    padding: 16px 0;
+    background: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.heading {
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 800;
+    color: #1d76b9;
+    white-space: nowrap;
+}
+
+.home-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-weight: 500;
+}
+
+.home-pages a {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.home-pages a:hover,
+.home-pages a[aria-current="page"] {
+    color: #1d76b9;
+}
+
+/* Navigation CTA links */
+
+.home-pages .btn-call-now,
+.home-pages .btn-donate {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 85px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.home-pages .btn-call-now {
+    background-color: #1d76b9;
+    color: #fff;
+    border: 1px solid #1d76b9;
+}
+
+.home-pages .btn-call-now:hover {
+    background-color: #155e95;
+    color: #fff;
+}
+
+.home-pages .btn-donate {
+    background-color: #fff;
+    color: #b91d49;
+    border: 1px solid #b91d49;
+}
+
+.home-pages .btn-donate:hover {
+    background-color: #b91d49;
+    color: #fff;
+}
+
+/* Hamburger */
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    background-color: #222;
+    border-radius: 3px;
+}
+
+/* =========================================
+   CONTACT HERO
+========================================= */
+
+.contact {
+    background-color: #1d76b9;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.contact h1 {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.contact p {
+    color: #e5eff7;
+    font-size: 19px;
+    max-width: 850px;
+    line-height: 1.7;
+    margin: 0 auto;
+}
+
+/* =========================================
+   CONTACT FORM SECTION
+========================================= */
+
+.contact-section {
+    background-color: #fff;
+}
+
+.form {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.form .left-form {
+    flex: 1;
+    min-width: 0;
+}
+
+.form .left-form h2,
+.form .right-form h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #222;
+}
+
+/* Form fields */
+
+.form .left-form .form-group {
+    margin-bottom: 22px;
+}
+
+.form .left-form .form-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form .left-form .form-group input,
+.form .left-form .form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 9px;
+    font-size: 15px;
+    color: #222;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form .left-form .form-group input {
+    min-height: 50px;
+}
+
+.form .left-form .form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form .left-form .form-group input:focus,
+.form .left-form .form-group textarea:focus {
+    border-color: #1578c3;
+    box-shadow: 0 0 0 3px rgba(21, 120, 195, 0.12);
+}
+
+.form .left-form .form-group input::placeholder,
+.form .left-form .form-group textarea::placeholder {
+    color: #999;
+}
+
+/* Send button */
+
+.form .left-form .send-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 15px;
+    background-color: #1578c3;
+    border: none;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form .left-form .send-btn:hover {
+    background-color: #11619e;
+}
+
+.form .left-form .send-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#successMsg {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.form .right-form {
+    flex: 0 0 42%;
+    min-width: 0;
+}
+
+.form .right-form h2 {
+    margin-bottom: 28px;
+}
+
+.form .right-form .info-card {
+    width: 100%;
+    background-color: #f7f7f7;
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.form .right-form .info-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background-color: #e7f0fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.form .right-form .info-content {
+    min-width: 0;
+}
+
+.form .right-form .info-content h3 {
+    margin-bottom: 7px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.form .right-form .info-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.form .right-form .info-content p small {
+    font-size: 12px;
+    color: #666;
+}
+
+.form .right-form .info-content a {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.form .right-form .info-content a:hover {
+    color: #1d76b9;
+    text-decoration: underline;
+}
+
+/* =========================================
+   MAP SECTION
+========================================= */
+
+.facility-sec3-map-page {
+    text-align: center;
+    padding: 45px 0 55px;
+    background-color: #f8fafc;
+}
+
+.facility-sec3-map-page h2 {
+    font-size: 27px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.facility-sec3-map-page p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 22px;
+}
+
+.facility-sec-map {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background-color: #f1f5f9;
+    padding: 45px 0;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #222;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+.footer-quickline a {
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.footer-quickline a:hover {
+    color: #1d76b9;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact img {
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.footer-contact a {
+    color: #555;
+}
+
+.footer-contact a:hover {
+    color: #1d76b9;
+}
+
+.footer-location iframe {
+    width: 100%;
+    height: 220px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .home-pages {
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .form {
+        gap: 35px;
+    }
+
+    .form .right-form {
+        flex-basis: 45%;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 900px) {
+
+    .top-contact-details {
+        font-size: 12px;
+    }
+
+    .top-contact-details .container {
+        gap: 5px 15px;
+    }
+
+    nav {
+        padding: 13px 0;
+    }
+
+    .heading {
+        font-size: 23px;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .home-pages {
+        display: none;
+        position: absolute;
+        top: calc(100% + 13px);
+        left: -24px;
+        right: -24px;
+        max-height: calc(100vh - 130px);
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 24px 20px;
+        background-color: #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+    }
+
+    .home-pages.open {
+        display: flex;
+    }
+
+    .home-pages > a {
+        display: block;
+        width: 100%;
+        padding: 12px 5px;
+        font-size: 15px;
+    }
+
+    .home-pages .btn-call-now,
+    .home-pages .btn-donate {
+        text-align: center;
+        margin-top: 8px;
+        padding: 12px;
+    }
+
+    .contact {
+        padding: 50px 18px;
+    }
+
+    .contact h1 {
+        font-size: 36px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+
+    .form {
+        flex-direction: column;
+        gap: 45px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .form .left-form,
+    .form .right-form {
+        width: 100%;
+        max-width: 100%;
+        flex: auto;
+    }
+
+    .form .left-form h2,
+    .form .right-form h2 {
+        font-size: 25px;
+    }
+
+    .facility-sec3-map-page h2 {
+        font-size: 23px;
+    }
+
+    .facility-sec-map {
+        height: 350px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .top-contact-details {
+        padding: 7px 0;
+    }
+
+    .top-contact-details .container {
+        justify-content: center;
+        gap: 5px 12px;
+    }
+
+    .top-contact-details a {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .top-contact-details img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .heading {
+        font-size: 21px;
+    }
+
+    .home-pages {
+        left: -18px;
+        right: -18px;
+    }
+
+    .contact {
+        padding: 42px 16px;
+    }
+
+    .contact h1 {
+        font-size: 29px;
+        margin-bottom: 12px;
+    }
+
+    .contact p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .form {
+        padding-top: 38px;
+        padding-bottom: 38px;
+        gap: 35px;
+    }
+
+    .form .left-form h2,
+    .form .right-form h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .form .left-form .form-group {
+        margin-bottom: 17px;
+    }
+
+    .form .left-form .form-group label {
+        font-size: 14px;
+    }
+
+    .form .left-form .form-group input,
+    .form .left-form .form-group textarea {
+        font-size: 14px;
+        padding: 12px 13px;
+    }
+
+    .form .left-form .form-group input {
+        min-height: 46px;
+    }
+
+    .form .left-form .form-group textarea {
+        min-height: 120px;
+    }
+
+    .form .left-form .send-btn {
+        font-size: 15px;
+        padding: 13px;
+    }
+
+    .form .right-form .info-card {
+        padding: 16px;
+        gap: 13px;
+        margin-bottom: 14px;
+    }
+
+    .form .right-form .info-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+        border-radius: 12px;
+    }
+
+    .form .right-form .info-content h3 {
+        font-size: 15px;
+    }
+
+    .form .right-form .info-content p,
+    .form .right-form .info-content a {
+        font-size: 13px;
+    }
+
+    .facility-sec3-map-page {
+        padding: 32px 0;
+    }
+
+    .facility-sec3-map-page h2 {
+        font-size: 19px;
+    }
+
+    .facility-sec3-map-page p {
+        font-size: 13px;
+    }
+
+    .facility-sec-map {
+        height: 260px;
+    }
+
+    footer {
+        padding: 35px 0;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer h3 {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .footer-location iframe {
+        height: 200px;
+    }
+}
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+
+    .top-contact-details .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact h1 {
+        font-size: 26px;
+    }
+
+    .facility-sec-map {
+        height: 220px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(29, 118, 185, 0.45);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
